@@ -1,9 +1,12 @@
 fn main() {
-	println!("Main function.");
-	other_func(1);
-}
+    let mut x = 5;
+    println!("value of x is {}", x);
+    x = 6;
+    println!("value of x is {}", x);
 
-fn other_func(x: u32) -> bool {
-	println!("x = {}", x);
-	true
+    //shadowing
+    let y = 5;
+    let y = y + 1;
+    let y = y * 2;
+    println!("value of y is {}", y);
 }
