@@ -1,24 +1,30 @@
 use std::io;
 
 fn main() {
-	let mut num = String::new();
+    println!("what fibonacci number should i count to?");
 
-    println!("input what fibonacci number you would like to find to: ");
+    let n: u32 = loop {
+    	let mut input = String::new();
 
-    io::stdin().read_line(&mut num)
-    .expect("Failed to read line");
+    	io::stdin().read_line(&mut input)
+    		.expect("failed to read line");
 
-    let num: u32 = match num.trim().parse() {
-    	Ok(num) => num,
-    	Err(_)  => panic!("input not of type u32: {}", num),
+    	match input.trim().parse() {
+    		Ok(num) => break num,
+    		Err(_) => continue
+    	}
     };
-    println!("Your number: {}", fib(num));
+
+    for i in 0..n  {
+    	println!("{}", fib(i));
+    }
 }
 
 fn fib(n: u32) -> u32 {
 	if n == 0 || n == 1 {
-		n
-	} else {
+		n 
+	}
+	else {
 		fib(n-1) + fib(n-2)
 	}
 }

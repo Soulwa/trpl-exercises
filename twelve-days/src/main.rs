@@ -12,12 +12,11 @@ fn main() {
 
 		if i == 0 {
 			println!("A partridge in a pear tree!");
-		} else {
+		}
+		else {
 			for j in (11-i)..12 {
 				println!("{}", verses[j]);
 			}
 		}
-
-		println!("\n");
 	}
 }

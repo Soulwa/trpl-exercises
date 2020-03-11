@@ -1,5 +1,5 @@
 [package]
-name = "twelve-days"
+name = "temp-converter"
 version = "0.1.0"
 authors = ["Soulwa <awkwardzombienerd@gmail.com>"]
 edition = "2018"
