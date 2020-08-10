@@ -9,7 +9,7 @@ fn main() {
 
     let y = {
     	let x = 3;
-    	x + 1 //expressions do not end with semicolons, adding one makes it a statement which doesn't return
+    	x + 1 // expressions do not end with semicolons, adding one makes it a statement which doesn't return
     };
 
     another_function(x, y);
@@ -20,7 +20,7 @@ fn another_function(x: i32, y: i32) {
 }
 
 fn four() -> i32 {
-	4 //implicitly returns last expression
+	4 // implicitly returns last expression
 }
 
 fn plus_one(x: i32) -> i32 {
