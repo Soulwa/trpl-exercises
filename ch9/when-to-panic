@@ -1,0 +1,18 @@
+panic when:
+- prototyping code (unwrap)
+- examples
+- testing (should fail)
+
+can use unwrap when:
+- more info than the compiler
+	- ex: "127.0.0.1".parse().unwrap()
+
+panic:
+- code is in a bad state
+	- shouldn't continue in this state
+	- not expected to happen
+	- code relies on being in good state
+	- no good way to encode failure
+- expected failure : Result type! (ie HTTP request)
+
+can add custom types for data validation
